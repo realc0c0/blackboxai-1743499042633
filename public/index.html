@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenheim - The Telegram Dungeon Crawler</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div id="app" class="container mx-auto px-4 py-8">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold font-[MedievalSharp]">Tokenheim</h1>
+            <div class="flex items-center space-x-2">
+                <span id="token-count" class="text-xl">50</span>
+                <i class="fas fa-coins text-yellow-400"></i>
+            </div>
+        </header>
+
+        <main id="game-content" class="rounded-lg shadow-xl p-6 bg-gray-800 border border-gray-700">
+            <!-- Game content will be loaded here -->
+            <div class="text-center py-16">
+                <p class="text-gray-400">Loading the dungeon...</p>
+            </div>
+        </main>
+
+        <div id="action-buttons" class="mt-6 grid grid-cols-3 gap-4">
+            <button class="bg-red-600 hover:bg-red-700 py-3 px-4 rounded-lg font-bold">
+                ⚔️ Attack
+            </button>
+            <button class="bg-blue-600 hover:bg-blue-700 py-3 px-4 rounded-lg font-bold">
+                🛡️ Defend
+            </button>
+            <button class="bg-purple-600 hover:bg-purple-700 py-3 px-4 rounded-lg font-bold">
+                ✨ Special
+            </button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
