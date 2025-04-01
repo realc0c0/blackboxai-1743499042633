@@ -1,0 +1,76 @@
+/* Custom dark theme enhancements */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #111827;
+}
+
+/* Game content styling */
+#game-content {
+    min-height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+/* Button animations */
+button {
+    transition: all 0.2s ease;
+    transform: scale(1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Health bar styling */
+.health-bar {
+    height: 20px;
+    background-color: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    background-color: #ef4444;
+    transition: width 0.3s ease;
+}
+
+/* Enemy styling */
+.enemy {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    #action-buttons {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Region-specific backgrounds */
+.region-frostbyte {
+    background-image: url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+}
+
+.region-fomo {
+    background-image: url('https://images.unsplash.com/photo-1506318137071-a8e06380a023?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+}
+
+.region-pumpdump {
+    background-image: url('https://images.unsplash.com/photo-1506318137071-a8e06380a023?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+}
